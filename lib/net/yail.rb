@@ -606,8 +606,8 @@ class YAIL
 
         # Notices come from server sometimes, so... another merger for legacy fun!
         nick = event.server? ? '' : event.nick
-	from = event.server? ? nick : event.from
-        handle(event.type, event.from, nick, target, event.text)
+        from = event.server? ? nick : event.from
+        handle(event.type, from, nick, target, event.text)
 
       # This is a bit painful for right now - just use some hacks to make it work semi-nicely,
       # but let's not put hacks into the core Event object.  Modes need reworking soon anyway.
